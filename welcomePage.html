@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="./Style/all.min.css" />
+    <link rel="stylesheet" href="./Style/bootstrap.min.css" />
+    <link rel="stylesheet" href="./Style/style.css" />
+    <link
+      rel="shortcut icon"
+      href="Images/login.png"
+      sizes="16x16 32x32"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <nav
+      class="w-100 px-5 py-3 fixed-top d-flex justify-content-between align-items-center"
+    >
+      <a href="#" class="fs-3 px-2 fst-italic" id="smartLoginLogo"
+        >Smart Login</a
+      >
+      <a href="index.html" class="btn btn-outline-warning">Logout</a>
+    </nav>
+    <div
+      class="container vh-100 py-4 text-light d-flex justify-content-center align-items-center"
+    >
+      <section
+        id="bookmark-add-section"
+        class="bg-dark bg-opacity-25 w-75 h-50 mx-auto mt-4 py-4 border border-2 border-danger-subtle rounded-4 text-light d-flex justify-content-center align-items-center"
+      >
+        <div id="welcome" class="text-center">
+          <p class="display-5 fw-bolder">
+            <span id="welcomeWord" class="text-info">Welcome Back </span
+            ><span id="currentUserName" class="text-warning"></span>
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/welcomePage.js"></script>
+  </body>
+</html>
