@@ -2,6 +2,7 @@ var signInPage = document;
 var userEmailInput = signInPage.querySelector("#user-email");
 var userPasswordInput = signInPage.querySelector("#user-password");
 var logInButton = signInPage.querySelector("#loginBtn");
+var logInAnchor = signInPage.querySelector("#loginAnchor");
 var validationError = signInPage.querySelector("#validationError");
 var signInErrorMessage = signInPage.querySelector("#signInFailedError");
 var localStorageKey = "usersInfo";
@@ -9,7 +10,6 @@ var localStorageKey = "usersInfo";
 var usersList = getLocalStorage() ? getLocalStorage() : [];
 
 logInButton.addEventListener("click", function (event) {
-  event.preventDefault();
   if (checkValidations()) {
     var currentUser = {
       email: userEmailInput.value,
@@ -17,8 +17,11 @@ logInButton.addEventListener("click", function (event) {
     };
     if (checkUserExists(currentUser)) {
       localStorage.setItem("currentUserName", currentUser.name);
-      window.location.href = "../welcomePage.html";
+    } else {
+      event.preventDefault();
     }
+  } else {
+    event.preventDefault();
   }
 });
 
