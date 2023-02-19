@@ -10,6 +10,7 @@ var localStorageKey = "usersInfo";
 var usersList = getLocalStorage() ? getLocalStorage() : [];
 
 SignUPButton.addEventListener("click", function (e) {
+  signUpSuccessMsg.classList.replace("d-block", "d-none");
   e.preventDefault();
   var userInfo = {
     name: userNameInput.value,
